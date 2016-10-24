@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心迷宫</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            height: 100%;
+            padding-top: 1px;
+            box-sizing: border-box;
+            -webkt-box-sizing: border-box;
+        }
+    </style>
+    <script src="asset/js/lib/phaser.js"></script>
+    <script src="asset/js/state/load.js"></script>
+    <script src="asset/js/state/play.js"></script>
+    <script>
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, 'container');
+        game.state.add('load', loadState);
+        game.state.add('play',playState);
+        game.state.start('load');
+    </script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>
